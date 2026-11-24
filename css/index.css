@@ -1,0 +1,298 @@
+/* Logo superior */
+.logo-superior {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.logo-minsal {
+    height: 120px;
+}
+
+/* Centrado vertical y horizontal */
+.usuarios-centro {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+
+/* Caja principal */
+.usuarios-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.titulo {
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.btn-agregar-container {
+    margin-bottom: 20px;
+}
+
+.btn-agregar {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #0056b3;
+}
+
+.btn-agregar i {
+    margin-right: 6px;
+}
+
+/* Tabla de usuarios */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla thead {
+    background-color: #f0f5fa;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+.text-blue {
+    color: #007bff;
+}
+.text-red {
+    color: #dc3545;
+}
+
+.text-blue:hover,
+.text-red:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Footer tabla */
+.usuarios-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+/* Estilo antiguo - puede eliminarse si no se usa */
+/*
+.paginacion {
+    display: flex;
+    gap: 6px;
+}
+.paginacion a {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.paginacion a.activo {
+    background-color: #1976d2;
+    color: white;
+    pointer-events: none;
+}
+.paginacion a:hover {
+    background-color: #e0e0e0;
+}
+*/
+
+/* Nuevo paginador cuadrado + rectángulos */
+.paginacion-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-paginacion-usuario {
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.btn-paginacion-usuario.anterior,
+.btn-paginacion-usuario.siguiente {
+    width: auto;
+    height: auto;
+    padding: 6px 12px;
+    line-height: normal;
+}
+
+.btn-paginacion-usuario:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-paginacion-usuario.activo {
+    background-color: #007BFF;
+    color: white;
+    pointer-events: none;
+}
+
+.btn-paginacion-usuario.disabled {
+    background-color: #ccc;
+    color: #666;
+    pointer-events: none;
+}
+
+/* Footer fijo */
+footer {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Formulario de filtros */
+.filtro-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro-form input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 180px;
+}
+
+.selector-limite {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    color: #333;
+    width: 90px;
+}
+
+.btn-filtrar {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-filtrar:hover {
+    background-color: #0056b3;
+}
+
+/*usuario agregado correctamente */
+.alerta-exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    border-radius: 6px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Formulario de edición/registro */
+.formulario-wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.formulario-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-usuario input,
+.formulario-usuario select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-guardar {
+    background-color: #0d5c88;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    background-color: #09496d;
+}
+
+.btn-volver-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #5a6268;
+}

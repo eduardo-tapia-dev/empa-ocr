@@ -1,0 +1,133 @@
+/* Encabezado superior con logo y título */
+.header-metrica {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo-metrica {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.titulo-metrica {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* Contenedor principal estilo hoja */
+.metrica-contenedor {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Grilla de 2 columnas */
+.grid-graficos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Cada gráfico */
+.grafico-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra título, leyenda y gráfico */
+    justify-content: center;
+}
+
+/* Título encima de cada gráfico */
+.subtitulo {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Canvas ajustado y centrado */
+canvas {
+    max-width: 100%;
+    width: 100%;
+    height: 250px !important;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Contenedor del botón volver y PDF */
+.botones-container {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Botón volver */
+.btn-volver {
+    padding: 10px 25px;
+    background-color: #004f86;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.btn-volver:hover {
+    background-color: #003b66;
+}
+
+/* Botón descargar */
+.btn-descargar {
+    padding: 10px 25px;
+    background-color: #2196f3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-descargar:hover {
+    background-color: #1976d2;
+}
+
+/* Power BI iframe */
+.iframe-wrapper iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 600px;
+}
+
+/* Responsive: una sola columna en móviles */
+@media (max-width: 768px) {
+    .grid-graficos {
+        grid-template-columns: 1fr;
+    }
+
+    .grafico-box {
+        margin-bottom: 30px;
+    }
+
+    .botones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iframe-wrapper iframe {
+        height: 400px;
+    }
+}

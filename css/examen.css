@@ -1,0 +1,259 @@
+/* Logo superior */
+.logo-superior {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.logo-minsal {
+    height: 120px;
+}
+
+/* Contenedor principal */
+.usuarios-centro {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.usuarios-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.titulo {
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+/* Botón volver */
+.btn-agregar-container {
+    margin-bottom: 20px;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #5a6268;
+}
+
+/* Filtros */
+.filtro-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filtro-form input[type="text"],
+.selector-limite {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 180px;
+}
+
+.selector-limite {
+    width: auto;
+}
+
+.btn-filtrar {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-filtrar:hover {
+    background-color: #0056b3;
+}
+
+/* Tabla */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla thead {
+    background-color: #f0f5fa;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+.opciones a i {
+    font-size: 18px;
+}
+
+.text-blue {
+    color: #007bff;
+}
+
+.text-red {
+    color: #dc3545;
+}
+
+.text-blue:hover,
+.text-red:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Footer */
+.usuarios-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+/* Paginación de exámenes */
+.paginacion-examen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Números cuadrados */
+.btn-paginacion-examen {
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+/* Anterior/Siguiente rectangulares */
+.btn-paginacion-examen.anterior,
+.btn-paginacion-examen.siguiente {
+    width: auto;
+    height: auto;
+    padding: 6px 12px;
+    line-height: normal;
+}
+
+.btn-paginacion-examen:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-paginacion-examen.activo {
+    background-color: #007BFF;
+    color: white;
+    pointer-events: none;
+}
+
+.btn-paginacion-examen.disabled {
+    background-color: #ccc;
+    color: #666;
+    pointer-events: none;
+}
+
+/* Footer fijo */
+footer.footer {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .tabla thead {
+        display: none;
+    }
+
+    .tabla,
+    .tabla tbody,
+    .tabla tr,
+    .tabla td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+        padding: 10px 0;
+    }
+
+    .tabla td {
+        text-align: left;
+        padding: 8px 12px;
+        position: relative;
+        font-size: 14px;
+    }
+
+    .tabla td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px;
+        color: #555;
+    }
+
+    .filtro-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filtro-form input[type="text"],
+    .selector-limite,
+    .btn-filtrar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .usuarios-footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .btn-paginacion-examen {
+        min-width: auto;
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,81 @@
+/* Reset general */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f5f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    height: 100px;
+}
+
+main {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* NUEVO: filas de botones */
+.menu-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.option {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    color: #333;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+}
+
+.option i {
+    margin-bottom: 15px;
+}
+
+/* Íconos azules para opciones principales */
+.icon-blue {
+    color: #2c80ff;
+}
+
+/* Logout: color rojo y hover con fondo suave */
+.logout {
+    color: #e74c3c;
+}
+
+.logout:hover {
+    background-color: #ffe5e5;
+}
